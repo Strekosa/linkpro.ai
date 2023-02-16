@@ -7,8 +7,8 @@
     "editor": ["./styles/wp-dashboard/editor.scss"],
     "customizer": ["./scripts/wp-dashboard/customizer.js"]
   },
-  "publicPath": "/wp-content/themes/codeska",
-  "devUrl": "http://codeska.local",
+  "publicPath": "http://linkpro.ai/wp-content/themes/linkpro",
+  "devUrl": "http://linkpro.ai",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": ["*.php", "**/*.php"]

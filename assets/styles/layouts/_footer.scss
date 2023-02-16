@@ -1,0 +1,43 @@
+.pre-footer {
+  background-color: radial-gradient(45.56% 137.97% at 76.04% 50%, #191933 0%, #000 100%) #0d111c;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: top right;
+}
+
+.site-footer {
+  background: #090a0d;
+  padding: 120px 0 250px;
+
+  .footer-copyright {
+    padding-top: 46px;
+    border-top: 1px solid #354153;
+    color: #60738f;
+
+    .socials {
+      &-list {
+        li {
+          img {
+            height: 24px;
+            width: 24px;
+            transition: 0.3s ease all;
+          }
+
+          &:not(:last-child) {
+            margin-right: 24px;
+          }
+
+          &:hover {
+            img {
+              scale: 1.1;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-top: 50px;
+      }
+    }
+  }
+}

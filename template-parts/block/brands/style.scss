@@ -1,0 +1,41 @@
+
+.repeater {
+  .title {
+    @include adaptiv-margin-bottom(40, 20);
+  }
+
+  &__main {
+  }
+
+  &__item {
+    max-width: 360px;
+  }
+  &__icon {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .repeater {
+
+    &__main {
+    }
+
+    &__item {
+      max-width: 100%;
+      &:not(:last-child){
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

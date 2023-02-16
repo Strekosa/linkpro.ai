@@ -1,1 +1,53 @@
 //global styles
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Regular.eot');
+  src: local('☺'), url('../../fonts/Inter-Regular.woff') format('woff'), url('../../fonts/Inter-Regular.woff2') format('woff2'), url('../../fonts/Inter-Regular.ttf') format('truetype'), url('../../fonts/Inter-Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Medium.eot');
+  src: local('☺'), url('../../fonts/Inter-Medium.woff') format('woff'), url('../../fonts/Inter-Medium.woff2') format('woff2'), url('../../fonts/Inter-Medium.ttf') format('truetype'), url('../../fonts/Inter-Medium.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-SemiBold.eot');
+  src: local('☺'), url('../../fonts/Inter-SemiBold.woff') format('woff'), url('../../fonts/Inter-SemiBold.woff2') format('woff2'), url('../../fonts/Inter-SemiBold.ttf') format('truetype'), url('../../fonts/Inter-SemiBold.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Bold.eot');
+  src: local('☺'), url('../../fonts/Inter-Bold.woff') format('woff'), url('../../fonts/Inter-Bold.woff2') format('woff2'), url('../../fonts/Inter-Bold.ttf') format('truetype'), url('../../fonts/Inter-Bold.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  background-color: $white;
+}
+
+.sub-title {
+  background: #f8fafc;
+  border-radius: 32px;
+  padding: 4px 16px;
+  display: flex;
+  width: max-content;
+
+  p {
+    line-height: 31.5px;
+    font-weight: 500;
+    font-size: 18px;
+    background: linear-gradient(266.83deg, #373bff 0%, #10f595 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

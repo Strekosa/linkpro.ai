@@ -1,0 +1,70 @@
+:root {
+  --masonryGutter: 1.7%;
+}
+
+.reviews {
+  .sub-title {
+    @include adaptiv-margin-bottom(12, 10);
+    align-self: center;
+  }
+
+  .title {
+    @include adaptiv-margin-bottom(48, 20);
+    text-align: center;
+  }
+
+  &__main {
+    background: #F2F5F9;
+    border-radius: 40px;
+    padding: 38px;
+  }
+
+  &__item {
+    background: $white;
+    box-shadow: 0 20px 25px -5px rgba(4, 19, 49, 0.1), 0px 8px 10px -6px rgba(4, 19, 49, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin: calc(var(--masonryGutter) / 2);
+    width: calc(100% / 3 - var(--masonryGutter));
+    font-size: 14px;
+  }
+
+  &__top {
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+
+  &__name {
+    color: #1F293A;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &__position {
+    color: $text-subcolor;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .reviews {
+
+    &__item {
+      width: calc(100% / 2 - var(--masonryGutter));
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviews {
+    &__item {
+      width: calc(100% / 1 - var(--masonryGutter));
+    }
+  }
+}

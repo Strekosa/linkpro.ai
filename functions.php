@@ -2,7 +2,7 @@
 /**
  * Theme functions and definitions.
  *
- * @package Codeska
+ * @package linkpro
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  */
 
@@ -104,3 +104,17 @@ add_filter( 'rest_authentication_errors', 'rest_authentication_require' );
 
 // Disable the theme / plugin text editor in Admin
 define( 'DISALLOW_FILE_EDIT', true );
+
+// ACF Pro Options Page
+
+if ( function_exists( 'acf_add_options_page' ) ) {
+
+	acf_add_options_page( array(
+		'page_title' => 'Theme Settings',
+		'menu_title' => 'Theme Settings',
+		'menu_slug'  => 'theme-general-settings',
+		'capability' => 'edit_posts',
+		'redirect'   => false
+	) );
+
+}

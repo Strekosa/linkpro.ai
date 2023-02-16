@@ -2,7 +2,7 @@
 /**
  * Custom taxonomy for ACF Field Group for better organization in WP dashboard
  *
- * @package Codeska
+ * @package linkpro
  */
 
 if ( ! class_exists( 'ACF_Field_Groups_Type' ) ) :

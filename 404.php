@@ -3,7 +3,7 @@
  * The template for displaying 404 pages (not found).
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- * @package Codeska
+ * @package linkpro
  */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 						the_widget( 'WP_Widget_Recent_Posts' );
 
 						// Only show the widget if site has multiple categories.
-					if ( codeska_categorized_blog() ) :
+					if ( linkpro_categorized_blog() ) :
 						?>
 
 					<div class="widget widget_categories">

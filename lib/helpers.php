@@ -2,7 +2,7 @@
 /**
  * Helper functions
  *
- * @package Codeska
+ * @package linkpro
  */
 
 if ( ! function_exists( 'studly_case' ) ) {

@@ -2,30 +2,30 @@
 /**
  * Clean up WordPress defaults
  *
- * @package Codeska
+ * @package linkpro
  */
 
-if ( ! function_exists( 'codeska_start_cleanup' ) ) :
+if ( ! function_exists( 'linkpro_start_cleanup' ) ) :
 	/**
 	 * Start cleenup
 	 */
-	function codeska_start_cleanup() {
-		add_action( 'init', 'codeska_cleanup_head' );
+	function linkpro_start_cleanup() {
+		add_action( 'init', 'linkpro_cleanup_head' );
 		// Remove WP version from RSS.
-		add_filter( 'the_generator', 'codeska_remove_rss_version' );
+		add_filter( 'the_generator', 'linkpro_remove_rss_version' );
 		// Clean up comment styles in the head.
-		add_action( 'wp_head', 'codeska_remove_recent_comments_style', 1 );
+		add_action( 'wp_head', 'linkpro_remove_recent_comments_style', 1 );
 	}
 
-	add_action( 'after_setup_theme', 'codeska_start_cleanup' );
+	add_action( 'after_setup_theme', 'linkpro_start_cleanup' );
 endif;
 
 // Clean up head.
-if ( ! function_exists( 'codeska_cleanup_head' ) ) :
+if ( ! function_exists( 'linkpro_cleanup_head' ) ) :
 	/**
 	 * Head cleenup
 	 */
-	function codeska_cleanup_head() {
+	function linkpro_cleanup_head() {
 		// EditURI link.
 		remove_action( 'wp_head', 'rsd_link' );
 		// Category feed links.
@@ -61,21 +61,21 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // Remove WP version from RSS.
-if ( ! function_exists( 'codeska_remove_rss_version' ) ) :
+if ( ! function_exists( 'linkpro_remove_rss_version' ) ) :
 	/**
 	 * Remove rss
 	 */
-	function codeska_remove_rss_version() {
+	function linkpro_remove_rss_version() {
 		return '';
 	}
 endif;
 
 // Remove injected CSS from recent comments widget.
-if ( ! function_exists( 'codeska_remove_recent_comments_style' ) ) :
+if ( ! function_exists( 'linkpro_remove_recent_comments_style' ) ) :
 	/**
 	 * Remove recent comments style
 	 */
-	function codeska_remove_recent_comments_style() {
+	function linkpro_remove_recent_comments_style() {
 		global $wp_widget_factory;
 		if ( isset( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'] ) ) {
 			remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );

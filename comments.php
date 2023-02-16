@@ -6,7 +6,7 @@
  * and the comment form.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- * @package Codeska
+ * @package linkpro
  */
 
 /*

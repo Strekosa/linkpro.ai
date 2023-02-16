@@ -2,9 +2,30 @@
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
+
+/** Import everything from common */
 @import "common/global";
+@import "common/grid";
+@import "common/mixins";
+@import "common/typography";
+@import "common/normalize";
+
+/** Import everything from components */
+@import "components/buttons";
+
+/** Import everything from layouts */
 @import "layouts/header";
 @import "layouts/footer";
+
+/** Import everything from section */
+
+@import "template-parts/block/spacer/style";
+@import "template-parts/block/hero/style";
+@import "template-parts/block/side-by-side/style";
+@import "template-parts/block/accordion/style";
+@import "template-parts/block/repeater/style";
+@import "template-parts/block/reviews/style";
+@import "template-parts/block/features/style";
 
 /**
  * Import npm dependencies

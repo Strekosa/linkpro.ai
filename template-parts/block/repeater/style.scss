@@ -1,0 +1,95 @@
+
+.repeater {
+  padding: 120px 0 240px;
+  background: #0B0E14;
+  color: $white;
+
+  .title {
+    @include adaptiv-margin-bottom(48, 28);
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  &__item {
+    background: linear-gradient(180deg, rgba(18, 23, 33, 0.8) 0%, rgba(18, 23, 33, 0.64) 100%);
+    border: 1px solid rgba(202, 213, 226, 0.08);
+    border-radius: 12px;
+    padding: 24px 24px 32px 24px;
+    transition: 0.3s ease all;
+
+    &:hover {
+      border: 1px solid #6C78EA;
+
+      .repeater__link {
+        color: #C3CFFD;
+
+        svg {
+          margin-left: 28.75px;
+
+          path {
+            stroke: #C3CFFD;;
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    background: #161C27;
+    border-radius: 8px;
+    margin-bottom: 24px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: $white;
+  }
+
+  &__text {
+    color: #90A2BC;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  &__link {
+    font-weight: 500;
+    color: #8690F9;
+
+    svg {
+      margin-left: 12.75px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .repeater {
+    padding: 80px 0 140px;
+
+    &__main {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .repeater {
+    padding: 60px 0 100px;
+
+    &__main {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+}

@@ -2,7 +2,7 @@
 /**
  * Template Name: Custom Page Template
  *
- * @package Codeska
+ * @package linkpro
  */
 
 get_header(); ?>

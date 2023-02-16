@@ -2,7 +2,7 @@
 /**
  * Loader for ACF Blocks
  *
- * @package Codeska
+ * @package linkpro
  */
 
 if ( ! class_exists( 'ACF_Blocks_Loader' ) && function_exists( 'acf_register_block' ) ) :

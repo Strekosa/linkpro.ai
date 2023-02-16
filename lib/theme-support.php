@@ -3,14 +3,14 @@
  * Register theme support for languages, menus, post-thumbnails, post-formats etc.
  *
  * @link https://codex.wordpress.org/Function_Reference/add_theme_support
- * @package Codeska
+ * @package linkpro
  */
 
-if ( ! function_exists( 'codeska_theme_support' ) ) :
+if ( ! function_exists( 'linkpro_theme_support' ) ) :
 	/**
 	 * Add theme supports
 	 */
-	function codeska_theme_support() {
+	function linkpro_theme_support() {
 		// Add language support: @link {https://codex.wordpress.org/Multilingual_WordPress}
 		load_theme_textdomain( 'wp_dev', get_template_directory() . '/languages' );
 
@@ -65,5 +65,5 @@ if ( ! function_exists( 'codeska_theme_support' ) ) :
 		);
 	}
 
-	add_action( 'after_setup_theme', 'codeska_theme_support' );
+	add_action( 'after_setup_theme', 'linkpro_theme_support' );
 endif;

@@ -1,0 +1,97 @@
+//Size adaptive
+$maxWidth: 1440;
+
+@mixin adaptiv-height($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-width($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  width: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+//Font adaptive
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-line-height($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+//Margin adaptive
+@mixin adaptiv-margin-bottom($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  margin-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-margin-top($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  margin-top: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-margin-right($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  margin-right: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-margin-left($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  margin-left: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+//Padding adaptive
+@mixin adaptiv-padding-bottom($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  padding-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-padding-top($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  padding-top: calc (#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-padding-right($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  padding-right: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-padding-left($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  padding-left: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+
+@mixin font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}

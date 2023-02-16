@@ -3,15 +3,15 @@
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- * @package Codeska
+ * @package linkpro
  */
 
 /**
- * codeska_widgets_init
+ * linkpro_widgets_init
  *
  * @return void
  */
-function codeska_widgets_init() {
+function linkpro_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'wp_dev' ),
@@ -24,4 +24,4 @@ function codeska_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'codeska_widgets_init' );
+add_action( 'widgets_init', 'linkpro_widgets_init' );

@@ -7,7 +7,7 @@
  * Keywords: sample acf block example
  * Supports: { "align":false, "anchor":true }
  *
- * @package Codeska
+ * @package linkpro
  *
  * @var array $block
  */

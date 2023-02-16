@@ -2,7 +2,7 @@
 /**
  * Page template file
  *
- * @package Codeska
+ * @package linkpro
  */
 
 get_header(); ?>
