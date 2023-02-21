@@ -1,0 +1,111 @@
+.prefooter {
+  padding: 80px 0 120px;
+  background: radial-gradient(45.56% 137.97% at 76.04% 50%, #191933 0%, #000000 100%), #0D111C;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__title {
+    @include adaptiv-margin-bottom(64, 30);
+    max-width: 848px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #ffffff;
+    align-self: center;
+
+  }
+
+  &__form {
+
+    .wpcf7 form {
+      position: relative;
+      width: 413px;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+
+      input:not(.wpcf7-submit) {
+        width: 413px;
+        height: 48px;
+        background: #0C0F17;
+        color: #E1E8F1;
+        padding: 12px;
+        border: 1px solid #1F293A;
+        border-radius: 6px;
+        box-sizing: border-box;
+        cursor: pointer;
+        outline: none;
+        @media screen and (max-width: 578px) {
+          width: 100%;
+        }
+
+        &::placeholder {
+          color: #60738F;
+        }
+
+        &.myclass {
+          width: 301px;
+          @media screen and (max-width: 578px) {
+            width: 100%;
+          }
+        }
+
+        margin-bottom: 40px;
+      }
+
+      input[type="submit"] {
+
+        position: absolute;
+        top: 88px;
+        right: 0;
+        width: 100px;
+        height: 48px;
+        color: $white;
+        background: linear-gradient(180deg, #6C78EA 0%, #6E79E4 100%);
+        box-shadow: 0px 4px 8px rgba(48, 63, 214, 0.6), 0px 12px 32px rgba(48, 63, 214, 0.4);
+        border-radius: 6px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background: linear-gradient(180deg, #3444E2 0%, #5362F6 100%);
+        }
+
+        @media screen and (max-width: 576px) {
+          position: initial;
+          width: 100%;
+        }
+      }
+
+      input:-internal-autofill-selected {
+
+        background-color: #0C0F17 !important;
+        color: fieldtext !important;
+      }
+
+      .wpcf7-response-output {
+        margin: 24px 0 0 0;
+        padding: 12px;
+        min-height: 48px;
+        color: $white;
+        border: 1px solid #6C78EA;
+        border-radius: 6px;
+      }
+
+      .wpcf7-spinner {
+        display: none;
+      }
+
+      .wpcf7-not-valid-tip {
+        position: absolute;
+        bottom: -40px;
+      }
+    }
+  }
+}

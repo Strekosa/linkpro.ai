@@ -48,5 +48,5 @@
 
 	<footer class="entry-footer">
 		<?php linkpro_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>
 </article><!-- #post-## -->

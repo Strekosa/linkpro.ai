@@ -1,10 +1,10 @@
 <?php
 /**
- * Block Name: Repeater
- * Description: Repeater block managed with ACF.
+ * Block Name: Brands
+ * Description: Brands block managed with ACF.
  * Category: common
  * Icon: format-image
- * Keywords: repeater acf block
+ * Keywords: brands acf block
  * Supports: { "align":false, "anchor":true }
  *
  * @package Codeska
@@ -18,51 +18,43 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $custom_class = isset($block['className']) ? $block['className'] : '';
 
 $title = get_field('title');
-
+$slider = get_field('brands_list');
 ?>
 <section
 		id="<?php echo $block_id; ?>"
 		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?>">
-	<div class="container-boxed column">
+	<div class="<?php echo $slug; ?>__main container-boxed column">
 		<?php
 		if ($title) : ?>
-			<h2 class="title"><?php echo $title; ?></h2>
+			<p class="<?php echo $slug; ?>__title">
+				<?php echo $title; ?>
+			</p>
 		<?php endif; ?>
 
 		<?php
 		// check if the nested repeater field has rows of data
-		if (have_rows('repeater_list')):?>
-			<div class="<?php echo $slug; ?>__main flex justify-between flex-sm-column">
-				<?php while (have_rows('repeater_list')): the_row();
-					$icon = get_sub_field('icon');
-					$title = get_sub_field('title');
-					$text = get_sub_field('text');
-					?>
-					<div class="<?php echo $slug; ?>__item flex column w-100-sm">
-						<div class="<?php echo $slug; ?>__top flex align-center">
-							<?php if ($icon) : ?>
-								<div class="<?php echo $slug; ?>__icon">
-									<img src="<?php echo esc_url($icon['url']); ?>"
-										 alt="<?php echo esc_attr($icon['alt']); ?>"/>
-								</div>
-							<?php endif; ?>
-							<?php
-							if ($title) : ?>
-								<h3 class="<?php echo $slug; ?>__title"><?php echo $title; ?></h3>
-							<?php endif; ?>
-						</div>
+		if (have_rows('brands_list')):
+			echo '<div class="brands-slider hide-mobile">';
 
-
-						<?php
-						if ($text) : ?>
-							<div class="<?php echo $slug; ?>__text">
-								<?php echo $text; ?>
-							</div>
-						<?php endif; ?>
-
-					</div>
-				<?php endwhile; ?>
-			</div>
+			// loop through the rows of data
+			foreach ($slider as $slide) {
+				echo '<div class="brands-item flex align-center justify-center"><img src="' . $slide['url'] . '" alt="' . $slide['alt'] . '"></div>';
+			}
+			echo '</div>';
+			?>
 		<?php endif; ?>
+
 	</div>
+	<?php
+	// check if the nested repeater field has rows of data
+	if (have_rows('brands_list')):
+		echo '<div class="brands-slider show-on-mobile">';
+
+		// loop through the rows of data
+		foreach ($slider as $slide) {
+			echo '<div class="brands-item flex align-center justify-center"><img src="' . $slide['url'] . '" alt="' . $slide['alt'] . '"></div>';
+		}
+		echo '</div>';
+		?>
+	<?php endif; ?>
 </section>

@@ -26,6 +26,10 @@
 @import "template-parts/block/repeater/style";
 @import "template-parts/block/reviews/style";
 @import "template-parts/block/features/style";
+@import "template-parts/block/brands/style";
+@import "template-parts/block/automatically/style";
+@import "template-parts/block/about-price/style";
+@import "template-parts/block/prefooter/style";
 
 /**
  * Import npm dependencies
@@ -34,3 +38,7 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+
+// Import Slick
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";

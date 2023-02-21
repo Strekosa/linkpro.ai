@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c05eacbe2c3d0e54f84a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a47e96b2d6c253452e4a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(72)(__webpack_require__.s = 72);
+/******/ 	return hotCreateRequire(83)(__webpack_require__.s = 83);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2192,7 +2192,24 @@ module.exports = function (str) {
 
 /***/ }),
 
-/***/ 72:
+/***/ 8:
+/*!*******************************************!*\
+  !*** ../node_modules/ansi-regex/index.js ***!
+  \*******************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+module.exports = function () {
+	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-PRZcf-nqry=><]/g;
+};
+
+
+/***/ }),
+
+/***/ 83:
 /*!****************************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/wp-dashboard/customizer.js ***!
   \****************************************************************************************/
@@ -2201,12 +2218,12 @@ module.exports = function (str) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\OpenServer\domains\linkpro.ai\wp-content\themes\linkpro\assets\build\util/../helpers/hmr-client.js */1);
-module.exports = __webpack_require__(/*! ./scripts/wp-dashboard/customizer.js */73);
+module.exports = __webpack_require__(/*! ./scripts/wp-dashboard/customizer.js */84);
 
 
 /***/ }),
 
-/***/ 73:
+/***/ 84:
 /*!********************************************!*\
   !*** ./scripts/wp-dashboard/customizer.js ***!
   \********************************************/
@@ -2224,23 +2241,6 @@ wp.customize("blogname", function (value) {
     return __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".brand").text(to);
   });
 });
-
-/***/ }),
-
-/***/ 8:
-/*!*******************************************!*\
-  !*** ../node_modules/ansi-regex/index.js ***!
-  \*******************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-module.exports = function () {
-	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-PRZcf-nqry=><]/g;
-};
-
 
 /***/ }),
 

@@ -1,14 +1,31 @@
 
 .features {
   padding: 65px 0 128px;
+  background-color: #0b0e14;
+  color: #90a2bc;
   background-repeat: no-repeat;
   background-attachment: local;
   background-position: top center;
+  position: relative;
+
+  &::after {
+    content: "";
+    max-width: 1440px;
+    max-height: 736px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(92.4% 100% at 50% 0%, #151828 0%, rgba(21, 24, 40, 0) 26.81%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 
   .sub-title {
     @include adaptiv-margin-bottom(12, 10);
     background: rgba(28, 44, 74, 0.5);
     align-self: center;
+    z-index: 1;
   }
 
   .title {
@@ -77,16 +94,16 @@
 
 @media screen and (max-width: 768px) {
   .features {
+    background-position: bottom center;
+    &::after {
+      max-width: 100%;
+      max-height: 100%;
+      background: radial-gradient(461.67% 100% at 50% 0%, #151828 0%, rgba(21, 24, 40, 0) 26.81%);
+    }
+
     &__list {
       grid-template-columns: 1fr;
       gap: 30px;
     }
   }
 }
-
-
-
-
-
-
-

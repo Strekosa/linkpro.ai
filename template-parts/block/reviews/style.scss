@@ -5,11 +5,13 @@
 .reviews {
   .sub-title {
     @include adaptiv-margin-bottom(12, 10);
+
     align-self: center;
   }
 
   .title {
-    @include adaptiv-margin-bottom(48, 20);
+    @include adaptiv-margin-bottom(48, 48);
+
     text-align: center;
   }
 
@@ -63,6 +65,10 @@
 
 @media screen and (max-width: 768px) {
   .reviews {
+    &__main {
+      padding: 24px;
+    }
+
     &__item {
       width: calc(100% / 1 - var(--masonryGutter));
     }

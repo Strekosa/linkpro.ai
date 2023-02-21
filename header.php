@@ -22,14 +22,21 @@
 <header class="header">
 	<div class="header__container container-boxed">
 		<div class="header__row wrapper align-center">
-			<a class="header__brand brand" href="<?php echo esc_url( home_url() ); ?>">
-				<?php if ( get_header_image() ) : ?>
-					<img class="brand__img" src="<?php echo( get_header_image() ); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-					<?php
+			<a class="header__brand brand flex align-center justify-center" href="<?php echo esc_url(home_url()); ?>">
+				<?php if (get_header_image()) : ?>
+					<img class="brand__img" src="<?php echo(get_header_image()); ?>" alt="<?php bloginfo('name'); ?>"/>
+				<?php
 				else :
-					bloginfo( 'name' );
+					bloginfo('name');
 				endif;
 				?>
+				<?php
+				if ($logo_name = get_field('logo_name', 'options')) : ?>
+					<h1>
+						<?php echo $logo_name; ?>
+					</h1>
+				<?php endif; ?>
+
 			</a><!-- /.brand -->
 
 			<nav class="nav-primary header__nav navbar navbar-expand-lg navbar-light bg-light">
@@ -38,17 +45,17 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<?php
-				if ( has_nav_menu( 'primary' ) ) :
+				if (has_nav_menu('primary')) :
 					wp_nav_menu(
-						[
-							'theme_location'  => 'primary',
-							'menu_id'         => 'primary-menu',
-							'container_class' => 'collapse navbar-collapse',
-							'container_id'    => 'primaryNavBar',
-							'menu_class'      => 'navbar-nav flex',
-							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'walker'          => new linkpro_Navwalker(),
-						]
+							[
+									'theme_location' => 'primary',
+									'menu_id' => 'primary-menu',
+									'container_class' => 'collapse navbar-collapse',
+									'container_id' => 'primaryNavBar',
+									'menu_class' => 'navbar-nav flex',
+									'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'walker' => new linkpro_Navwalker(),
+							]
 					);
 				endif;
 				?>

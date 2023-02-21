@@ -19,15 +19,13 @@ $custom_class = isset($block['className']) ? $block['className'] : '';
 
 $title = get_field('title');
 $subtitle = get_field('subtitle');
-$bg = get_field('background');
-$color_text = get_field('color_text');
 $image = get_field('background_image');
 $url = $image['url'];
 ?>
 <section
 		id="<?php echo $block_id; ?>"
 		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?>"
-		style="background-color: <?php echo $bg; ?>; background-image: url('<?= $url; ?>'); color: <?php echo $color_text; ?>"
+		style="background-image: url('<?= $url; ?>');"
 >
 
 	<div class="container-boxed column <?php echo $slug; ?>__main">

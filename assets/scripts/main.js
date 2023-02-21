@@ -1,7 +1,10 @@
 // import external dependencies
 
 import "jquery";
-import "masonry-layout"
+import "masonry-layout";
+
+// Import Slick
+import 'slick-carousel';
 
 // Import everything from autoload
 import "./autoload/**/*"
@@ -68,23 +71,24 @@ if (iconMenu) {
 }
 
 import Masonry from 'masonry-layout'
+
 window.onload = () => {
 	const grid = document.querySelector('.reviews__list');
 	const masonry = new Masonry(grid, {
 		itemSelector: '.reviews__item',
 	});
 
-	masonry.on('LayoutComplete', () =>console.log('LayoutComplete'));
+	masonry.on('LayoutComplete', () => console.log('LayoutComplete'));
 
 }
 
-$(".slider").on("afterChange", function (){
+$(".slider").on("afterChange", function () {
 	const grid = document.querySelector('.reviews__list');
 	const masonry = new Masonry(grid, {
 		itemSelector: '.reviews__item',
 	});
 
-	masonry.on('LayoutComplete', () =>console.log('LayoutComplete'));
+	masonry.on('LayoutComplete', () => console.log('LayoutComplete'));
 });
 
 

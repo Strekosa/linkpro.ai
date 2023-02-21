@@ -1,20 +1,38 @@
 
-section.accordion {
-  .title {
-    @include adaptiv-margin-bottom(40, 20);
+.accordion {
+  &__description {
+    max-width: 410px;
+    width: 100%;
+    margin-right: 20px;
+
+    .title {
+      font-size: 52px;
+      line-height: 72px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 31.2px;
+    }
   }
 
   ul {
+    max-width: 738px;
+    width: 100%;
     border-top: 1px solid #E1E8F1;
     border-bottom: 1px solid #E1E8F1;
 
     li {
-      background: #FFFFFF;
-      padding: 25px;
+      background: $white;
+      padding: 20px 0 20px 0;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 32px;
+      color: #111622;
 
       &:not(:last-child) {
         border-bottom: 1px solid #E1E8F1;
-        margin-bottom: 10px;
       }
     }
   }
@@ -31,42 +49,65 @@ section.accordion {
       font-weight: 600;
       font-size: 20px;
       line-height: 32px;
+      transition: .3s color ease;
     }
 
     &__icon {
       width: 20px;
       height: 20px;
-      border: 1px solid black;
-      border-radius: 50%;
-      position: relative;
+      margin-left: 18.4px;
+      display: block;
+      line-height: 0;
 
-      &::before {
-        content: '+';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
+      .close {
+        display: block;
       }
 
-      &.active::before {
-        content: '-';
+      .open {
+        display: none;
+      }
+
+      &.active {
+        .close {
+          display: none;
+        }
+
+        .open {
+          display: block;
+        }
       }
     }
 
-    //
-    //&:hover,
-    //&:active,
-    //&:focus {
-    //  background-color: #E1E8F1;
-    //}
+    &:hover,
+    &:active,
+    &:focus {
+      .question__title {
+        color: $indigo;
+      }
+
+      .question__icon {
+        path {
+          fill: $indigo;
+        }
+      }
+    }
+
+    &.active {
+      .question__title,
+      .question__icon {
+        margin-bottom: 12px;
+      }
+
+      .question__title {
+        color: $indigo;
+      }
+    }
   }
 
   .answer {
     max-height: 0;
     overflow: hidden;
-    transition: all 1s ease;
-    padding-top: 12px;
+    transition: all .3s ease;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -74,14 +115,39 @@ section.accordion {
 }
 
 @media screen and (max-width: 1024px) {
+  .accordion {
+    &__description {
+      max-width: 70%;
+      margin-right: 0;
+      margin-bottom: 48px;
+
+      .title {
+        font-size: 32px;
+        line-height: 72px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+
+    ul {
+      max-width: 70%;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .accordion {
+    &__description {
+      max-width: 100%;
+    }
+
+    ul {
+      max-width: 100%;
+    }
+  }
 }
-
-
-
-
-
 
 

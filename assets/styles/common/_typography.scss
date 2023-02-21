@@ -42,6 +42,11 @@ h2,
   font-weight: 600;
   font-size: 56px;
   line-height: 70px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 h3,
@@ -88,7 +93,7 @@ a {
   &:focus,
   &:visited {
     /* basic hover and focus effects */
-    color: inherit;
+    //color: inherit;
     cursor: pointer;
     text-decoration: none;
   }

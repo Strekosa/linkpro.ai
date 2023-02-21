@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c05eacbe2c3d0e54f84a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a47e96b2d6c253452e4a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(65)(__webpack_require__.s = 65);
+/******/ 	return hotCreateRequire(76)(__webpack_require__.s = 76);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2937,7 +2937,18 @@ exports.push([module.i, "", "", {"version":3,"sources":[],"names":[],"mappings":
 /* 62 */,
 /* 63 */,
 /* 64 */,
-/* 65 */
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */
 /*!********************************************************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/wp-dashboard/admin.js ./styles/wp-dashboard/admin.scss ***!
   \********************************************************************************************************************/
@@ -2946,12 +2957,12 @@ exports.push([module.i, "", "", {"version":3,"sources":[],"names":[],"mappings":
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\OpenServer\domains\linkpro.ai\wp-content\themes\linkpro\assets\build\util/../helpers/hmr-client.js */1);
-__webpack_require__(/*! ./scripts/wp-dashboard/admin.js */66);
-module.exports = __webpack_require__(/*! ./styles/wp-dashboard/admin.scss */67);
+__webpack_require__(/*! ./scripts/wp-dashboard/admin.js */77);
+module.exports = __webpack_require__(/*! ./styles/wp-dashboard/admin.scss */78);
 
 
 /***/ }),
-/* 66 */
+/* 77 */
 /*!***************************************!*\
   !*** ./scripts/wp-dashboard/admin.js ***!
   \***************************************/
@@ -2963,7 +2974,7 @@ module.exports = __webpack_require__(/*! ./styles/wp-dashboard/admin.scss */67);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ 19)))
 
 /***/ }),
-/* 67 */
+/* 78 */
 /*!****************************************!*\
   !*** ./styles/wp-dashboard/admin.scss ***!
   \****************************************/

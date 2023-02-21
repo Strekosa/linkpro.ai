@@ -130,6 +130,7 @@
     "foundation-sites": "^6.5.3",
     "motion-ui": "~2.0.3",
     "jquery": "^3.3.1",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.15.0",
+	"slick-carousel": "^1.8.1"
   }
 }

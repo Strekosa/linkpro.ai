@@ -28,6 +28,7 @@ $theme_includes = [
 	'/lib/acf_field_groups_type.php',          // ACF Field Groups Organizer
 	'/lib/acf_blocks_loader.php',              // ACF Blocks Loader
 	'/lib/wp_dashboard_customizer.php',        // WP Dashboard customizer
+	'/lib/custom-wysiwyg.php',        // WP Dashboard customizer
 ];
 
 foreach ( $theme_includes as $file ) {
@@ -118,3 +119,4 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 	) );
 
 }
+
