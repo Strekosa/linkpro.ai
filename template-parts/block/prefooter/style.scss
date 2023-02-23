@@ -1,16 +1,31 @@
 .prefooter {
-  padding: 80px 0 120px;
   background: radial-gradient(45.56% 137.97% at 76.04% 50%, #191933 0%, #000000 100%), #0D111C;
   position: relative;
 
+  &__main {
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: bottom right;
+    padding: 80px 0 120px;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+      padding: 80px 0 160px;
+      background-image: none !important;
+    }
+  }
+
   &__bg {
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    left: 20%;
+    transform: translate(0, 0);
+    width: 648px;
+    height: 570px;
   }
 
   &__title {
-    @include adaptiv-margin-bottom(64, 30);
+    margin-bottom: 48px;
     max-width: 848px;
     font-weight: 600;
     font-size: 48px;
@@ -19,6 +34,10 @@
     color: #ffffff;
     align-self: center;
 
+    @media screen and (max-width: 576px) {
+      margin-bottom: 64px;
+      font-size: 32px;
+    }
   }
 
   &__form {

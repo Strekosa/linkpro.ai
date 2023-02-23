@@ -31,9 +31,17 @@ $footnote = get_field('footnote');
 		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?> flex column align-center pos-rel"
 
 >
-	<div class="<?php echo $slug; ?>__main container-boxed flex-md-down-column align-center pos-rel">
+	<div class="<?php echo $slug; ?>__main container-boxed flex-md-down-column-reverse align-center pos-rel">
 
-		<div class="<?php echo $slug; ?>__content flex column align-start pos-rel w-50 w-100-sm">
+		<?php if ($image) : ?>
+			<div class="<?php echo $slug; ?>__image w-100-sm hide-mobile"
+				 style="background-image: url('<?= $bg_url; ?>');">
+				<img src="<?php echo esc_url($image['url']); ?>"
+					 alt="<?php echo esc_attr($image['alt']); ?>"/>
+			</div>
+		<?php endif; ?>
+
+		<div class="<?php echo $slug; ?>__content flex column align-start pos-rel w-100-sm">
 			<?php
 			if ($subtitle) : ?>
 				<div class="sub-title">
@@ -78,14 +86,12 @@ $footnote = get_field('footnote');
 				</p>
 			<?php endif; ?>
 		</div>
-		<?php if ($image) : ?>
-			<div class="<?php echo $slug; ?>__image flex column w-50 w-100-sm "
-				 style="background-image: url('<?= $bg_url; ?>');">
-				<img src="<?php echo esc_url($image['url']); ?>"
-					 alt="<?php echo esc_attr($image['alt']); ?>"/>
-			</div>
-		<?php endif; ?>
-
 	</div>
-
+	<?php if ($image) : ?>
+		<div class="<?php echo $slug; ?>__image w-100-sm show-on-mobile"
+			 style="background-image: url('<?= $bg_url; ?>');">
+			<img src="<?php echo esc_url($image['url']); ?>"
+				 alt="<?php echo esc_attr($image['alt']); ?>"/>
+		</div>
+	<?php endif; ?>
 </section>

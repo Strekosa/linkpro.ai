@@ -29,9 +29,7 @@ $card_price = get_field('card_price');
 ?>
 <section
 		id="<?php echo $block_id; ?>"
-		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?>"
-		style="@media screen and (max-width: 768px) {background-image: url('<?= $url; ?>');}"
->
+		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?>">
 
 
 	<div class="<?php echo $slug; ?>__main container-boxed flex-md-down-column justify-center align-center-m-down">

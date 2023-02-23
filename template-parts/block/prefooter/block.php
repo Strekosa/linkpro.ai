@@ -28,14 +28,17 @@ $form = get_field('form');
 		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?>"
 
 >
-	<?php if ($image) : ?>
-		<div class="<?php echo $slug; ?>__bg">
-			<img src="<?php echo esc_url($image['url']); ?>"
-				 alt="<?php echo esc_attr($image['alt']); ?>"/>
-		</div>
-	<?php endif; ?>
 
-	<div class="container-boxed column">
+
+	<div class="<?php echo $slug; ?>__main container-boxed column pos-rel"
+		 style="background-image: url('<?= $url; ?>');"
+	>
+		<?php if ($image) : ?>
+			<div class="<?php echo $slug; ?>__bg show-on-mobile">
+				<img src="<?php echo esc_url($image['url']); ?>"
+					 alt="<?php echo esc_attr($image['alt']); ?>"/>
+			</div>
+		<?php endif; ?>
 		<?php
 		if ($title) : ?>
 			<h3 class="<?php echo $slug; ?>__title">

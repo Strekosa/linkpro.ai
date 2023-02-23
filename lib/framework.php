@@ -52,7 +52,9 @@ class linkpro_Navwalker extends Walker_Nav_Menu
 
 		// Build HTML for output.
 
-		$output .= '<span class="nav-desc" id="nav-desc-show"><i class="fa fa-angle-down" aria-hidden="true"></i> </span>';
+		$output .= '<span class="nav-desc" id="nav-desc-show"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4" fill="none">
+  <path d="M3.57573 3.57574L1.02426 1.02426C0.64628 0.646285 0.91398 0 1.44852 0H6.55147C7.08601 0 7.35371 0.646284 6.97573 1.02426L4.42426 3.57574C4.18994 3.81005 3.81005 3.81005 3.57573 3.57574Z" fill="#111622"></path>
+</svg> </span>';
 		$output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
 	}
 

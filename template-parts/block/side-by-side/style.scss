@@ -43,6 +43,11 @@ section.side-by-side {
       padding: 12px 20px;
       font-weight: 500;
       font-size: 18px;
+      transition: .3s ease all;
+
+      &:hover {
+        background-color: $indigo;
+      }
     }
   }
 
@@ -90,6 +95,7 @@ section.side-by-side {
 
     .content-side {
       margin-bottom: 8px;
+
       .link {
         margin-bottom: 40px;
       }

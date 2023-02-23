@@ -45,7 +45,6 @@
 
         svg {
           margin-left: 28.75px;
-
           path {
             stroke: #C3CFFD;;
           }
@@ -84,6 +83,7 @@
 
     svg {
       margin-left: 12.75px;
+      transition: .3s ease all;
     }
   }
 }

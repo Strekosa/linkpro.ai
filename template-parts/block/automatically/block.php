@@ -20,11 +20,19 @@ $custom_class = isset($block['className']) ? $block['className'] : '';
 $subtitle = get_field('subtitle');
 $title = get_field('title');
 $image = get_field('image');
+$image_bg = get_field('bg_image');
+$url = $image_bg['url'];
 ?>
 <section
 		id="<?php echo $block_id; ?>"
-		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?> pos-rel">
-
+		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?> pos-rel"
+>
+	<?php if ($image_bg) : ?>
+		<div class="<?php echo $slug; ?>__bg ">
+			<img src="<?php echo esc_url($image_bg['url']); ?>"
+				 alt="<?php echo esc_attr($image_bg['alt']); ?>"/>
+		</div>
+	<?php endif; ?>
 	<div class="<?php echo $slug; ?>__main container-boxed column align-center">
 
 		<div class="flex align-center column">
@@ -43,7 +51,9 @@ $image = get_field('image');
 
 		<?php
 		if ($image) : ?>
-			<div class="<?php echo $slug; ?>__image" >
+			<div class="<?php echo $slug; ?>__image flex column"
+
+			>
 				<img src="<?php echo esc_url($image ['url']); ?>"
 					 alt="<?php echo esc_attr($image ['alt']); ?>"/>
 			</div>
