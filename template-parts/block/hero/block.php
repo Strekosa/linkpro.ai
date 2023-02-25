@@ -79,7 +79,7 @@ $footnote = get_field('footnote');
 			<?php endif; ?>
 		</div>
 		<?php if ($image) : ?>
-			<div class="<?php echo $slug; ?>__image flex column w-50 w-100-sm "
+			<div class="<?php echo $slug; ?>__image flex column w-50 w-100-sm hide-mobile"
 				 style="background-image: url('<?= $bg_url; ?>');">
 				<img src="<?php echo esc_url($image['url']); ?>"
 					 alt="<?php echo esc_attr($image['alt']); ?>"/>
@@ -87,5 +87,11 @@ $footnote = get_field('footnote');
 		<?php endif; ?>
 
 	</div>
-
+	<?php if ($image) : ?>
+		<div class="<?php echo $slug; ?>__image w-100-sm show-on-mobile flex column"
+			 style="background-image: url('<?= $bg_url; ?>');">
+			<img src="<?php echo esc_url($image['url']); ?>"
+				 alt="<?php echo esc_attr($image['alt']); ?>"/>
+		</div>
+	<?php endif; ?>
 </section>

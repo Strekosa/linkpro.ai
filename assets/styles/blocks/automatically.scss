@@ -10,7 +10,7 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    background: radial-gradient(87.57% 100% at 50% 100%, #5A4CF0 0%, #FFFFFF 72.16%);
+    background: radial-gradient(87.57% 100% at 50% 100%, #5a4cf0 0%, #fff 72.16%);
     z-index: 1;
   }
 
@@ -42,7 +42,7 @@
 
   &__image {
     background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 20px 25px -5px rgba(4, 19, 49, 0.1), 0px 8px 10px -6px rgba(4, 19, 49, 0.1), 0px 24px 120px -6px rgba(4, 19, 49, 0.24);
+    box-shadow: 0 20px 25px -5px rgba(4, 19, 49, 0.1), 0 8px 10px -6px rgba(4, 19, 49, 0.1), 0 24px 120px -6px rgba(4, 19, 49, 0.24);
     backdrop-filter: blur(4px);
     border-radius: 24px 24px 0 0;
     padding: 20px 20px 0 20px;
@@ -56,9 +56,6 @@
       object-fit: cover;
     }
   }
-}
-
-@media screen and (max-width: 1024px) {
 }
 
 @media screen and (max-width: 768px) {

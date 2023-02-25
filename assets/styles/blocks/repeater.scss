@@ -1,7 +1,7 @@
 
 .repeater {
   padding: 120px 0 240px;
-  background: #0B0E14;
+  background: #0b0e14;
   color: $white;
   position: relative;
 
@@ -28,6 +28,16 @@
     grid-gap: 20px;
   }
 
+  &__link {
+    font-weight: 500;
+    color: #8690f9;
+
+    svg {
+      margin-left: 12.75px;
+      transition: 0.3s ease all;
+    }
+  }
+
   &__item {
     background: linear-gradient(180deg, rgba(18, 23, 33, 0.8) 0%, rgba(18, 23, 33, 0.64) 100%);
     border: 1px solid rgba(202, 213, 226, 0.08);
@@ -38,15 +48,16 @@
     position: relative;
 
     &:hover {
-      border: 1px solid #6C78EA;
+      border: 1px solid #6c78ea;
 
       .repeater__link {
-        color: #C3CFFD;
+        color: #c3cffd;
 
         svg {
           margin-left: 28.75px;
+
           path {
-            stroke: #C3CFFD;;
+            stroke: #c3cffd;
           }
         }
       }
@@ -56,7 +67,7 @@
   &__icon {
     width: 64px;
     height: 64px;
-    background: #161C27;
+    background: #161c27;
     border-radius: 8px;
     margin-bottom: 24px;
 
@@ -72,19 +83,9 @@
   }
 
   &__text {
-    color: #90A2BC;
+    color: #90a2bc;
     margin-bottom: 20px;
     font-weight: 400;
-  }
-
-  &__link {
-    font-weight: 500;
-    color: #8690F9;
-
-    svg {
-      margin-left: 12.75px;
-      transition: .3s ease all;
-    }
   }
 }
 

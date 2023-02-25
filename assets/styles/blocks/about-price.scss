@@ -1,7 +1,7 @@
 
 .about-price {
   padding: 240px 0 120px;
-  background-color: #090A0D;
+  background-color: #090a0d;
   color: $white;
   overflow: hidden;
 
@@ -51,11 +51,11 @@
     &-title {
       font-size: 32px;
       line-height: 48px;
-      background: linear-gradient(266.83deg, #373BFF 0%, #10F595 100%);
+      background: linear-gradient(266.83deg, #373bff 0%, #10f595 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-fill-color: transparent;
+      //text-fill-color: transparent;
       margin-bottom: 40px;
     }
 
@@ -70,7 +70,7 @@
       line-height: 20px;
       margin-bottom: 12px;
       background: $white;
-      box-shadow: 0px 20px 25px -5px rgba(4, 19, 49, 0.1), 0px 8px 10px -6px rgba(4, 19, 49, 0.1);
+      box-shadow: 0 20px 25px -5px rgba(4, 19, 49, 0.1), 0 8px 10px -6px rgba(4, 19, 49, 0.1);
       border-radius: 6px;
       transition: 0.3s ease all;
 
@@ -85,7 +85,7 @@
 
     &-footnote {
       line-height: 20px;
-      color: #90A2BC;
+      color: #90a2bc;
     }
 
     &-qualities {
@@ -109,7 +109,7 @@
       &-text {
         font-size: 16px;
         line-height: 20px;
-        color: #9DF1CA;
+        color: #9df1ca;
       }
     }
   }
@@ -152,13 +152,6 @@
       line-height: 28px;
     }
 
-    &__card {
-      &-bg {
-        img {
-        }
-      }
-    }
-
     &__qualities {
       margin-bottom: 20px;
     }
@@ -167,13 +160,6 @@
 
 @media screen and (max-width: 576px) {
   .about-price {
-
-    &__text {
-    }
-
-    &__desc {
-    }
-
     &__card {
       &-bg {
         top: -7%;
@@ -186,9 +172,6 @@
           height: 600px;
         }
       }
-    }
-
-    &__qualities {
     }
   }
 }

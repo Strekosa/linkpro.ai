@@ -1,11 +1,12 @@
 .header {
   background-color: transparent;
   z-index: 10;
-  margin-top: 18px;
+  padding-top: 18px;
   border: 1px solid #e1e8f1;
 
   &__container {
     padding: 20px 0;
+    border-top: 1px solid #e1e8f1;
 
     &::before {
       content: '';
@@ -573,9 +574,9 @@ body.lock {
       width: 100%;
       top: 0;
       left: 0;
-      height: 100px;
+      height: 104px;
       background-color: $white;
-      z-index: 2;
+      z-index: 10;
     }
   }
 
