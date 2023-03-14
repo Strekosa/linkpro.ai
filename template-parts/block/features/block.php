@@ -17,6 +17,7 @@ $block_id = $slug . '-' . $block['id'];
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 $custom_class = isset($block['className']) ? $block['className'] : '';
 
+$style = get_field('style');
 $title = get_field('title');
 $subtitle = get_field('subtitle');
 $image = get_field('background_image');
@@ -24,7 +25,7 @@ $url = $image['url'];
 ?>
 <section
 		id="<?php echo $block_id; ?>"
-		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?>"
+		class="<?php echo $slug; ?> <?php echo $align_class; ?> <?php echo $custom_class; ?> <?php echo $style; ?>"
 		style="background-image: url('<?= $url; ?>');"
 >
 

@@ -91,7 +91,10 @@
         box-shadow: 0 4px 8px rgba(48, 63, 214, 0.6), 0 12px 32px rgba(48, 63, 214, 0.4);
         border-radius: 6px;
         transition: 0.3s ease-in-out;
+        box-sizing: border-box;
         cursor: pointer;
+        border: none;
+        outline: none;
 
         &:hover {
           background: linear-gradient(180deg, #3444e2 0%, #5362f6 100%);

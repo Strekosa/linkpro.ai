@@ -1,0 +1,25 @@
+
+.info {
+
+  &__main {
+    max-width: 846px !important;
+    h3 {
+      margin-bottom: 24px;
+
+    }
+  }
+
+  p {
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .text {
+    &__main {
+      max-width: 96% !important;
+    }
+  }
+}

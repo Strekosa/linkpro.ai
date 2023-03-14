@@ -207,7 +207,9 @@
   .justify-center-m-down {
     justify-content: center;
   }
+}
 
+@media (min-width: 1025px) {
   .show-on-tablet {
     display: none;
     visibility: hidden;
@@ -235,8 +237,15 @@
   .w-100-md {
     width: 100%;
   }
+}
 
-  .hide-tablet {
+@media screen and (max-width: 1024px) {
+  .show-on-tablet {
+    display: initial;
+    visibility: visible;
+  }
+
+  .hide-on-tablet {
     display: none;
     visibility: hidden;
   }
@@ -319,6 +328,10 @@
 
   .w-100-xs {
     width: 100% !important;
+  }
+
+  .xs-align-start {
+    align-items: flex-start;
   }
 
   .xs-text-start {

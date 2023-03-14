@@ -11,22 +11,28 @@ section.side-by-side {
     }
 
     .title {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+    }
+
+    .desc {
+      font-size: 18px;
+      line-height: 31.5px;
+      color: #46556a;
+
+      ul {
+        margin-top: 36px;
+
+        li {
+          &::before {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath d='M1 4.47059L4.32143 8L11 1' stroke='%23554CE6' stroke-width='2'%3E%3C/path%3E%3C/svg%3E%0A");
+            margin-right: 12px;
+          }
+        }
+      }
     }
 
     .link {
-      color: $white;
-      background: #111622;
-      box-shadow: 0 10px 15px -3px rgba(4, 19, 49, 0.1), 0 4px 6px -4px rgba(4, 19, 49, 0.1);
-      border-radius: 6px;
-      padding: 12px 20px;
-      font-weight: 500;
-      font-size: 18px;
-      transition: 0.3s ease all;
-
-      &:hover {
-        background-color: $indigo;
-      }
+      margin-top: 20px;
     }
   }
 

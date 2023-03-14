@@ -31,7 +31,7 @@ $form = get_field('form');
 
 
 	<div class="<?php echo $slug; ?>__main container-boxed column pos-rel"
-		 style="background-image: url('<?= $url; ?>');"
+		 style="background-image: url('<?php echo $url; ?>');"
 	>
 		<?php if ($image) : ?>
 			<div class="<?php echo $slug; ?>__bg show-on-mobile">

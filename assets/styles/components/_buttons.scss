@@ -1,0 +1,14 @@
+.button {
+  background-color: $indigo;
+  box-shadow: 0 10px 15px -3px rgba(4, 19, 49, 0.1), 0 4px 6px -4px rgba(4, 19, 49, 0.1);
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 18px;
+  color: $white;
+  transition: 0.3s ease all;
+
+  &:hover {
+    background: #90a2bc;
+  }
+}

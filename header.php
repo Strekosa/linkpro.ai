@@ -16,9 +16,13 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
+<div id="preloader" class="preloader">
+	<div id="loader"></div>
+</div>
 <header class="header pos-rel">
 	<div class="header__container container-boxed pos-rel">
 		<div class="header__row wrapper align-center justify-between">
@@ -53,7 +57,7 @@
 						<a class="header__free flex justify-center align-center show-on-mobile"
 						   href="<?php echo esc_url($link_url); ?>"
 						   target="<?php echo esc_attr($link_target); ?>">
-							<?php _e( 'Get Started' ); ?>
+							<?php _e('Get Started'); ?>
 						</a>
 					<?php endif; ?>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryNavBar"

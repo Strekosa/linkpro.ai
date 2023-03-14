@@ -6,56 +6,37 @@
  * @package linkpro
  */
 
-get_header(); ?>
+get_header();
+$not_found_bg = get_field('not_found_bg', 'options');
+$bg_url = $not_found_bg ['url'];
+$not_found_image = get_field('not_found_image', 'options');
+?>
 
 	<div id="primary" class="content-area">
 		<section id="main" class="site-main" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp_dev' ); ?></h1>
-				</header><!-- .page-header -->
+			<section class="error-404 not-found container-boxed justify-between flex-sm-column-reverse"
+					 style="background-image: url('<?= $bg_url; ?>');"
+			>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp_dev' ); ?></p>
+				<div class="page-content flex column justify-center">
+					<h2 class="page-title"><?php esc_html_e('Page not found', 'wp_dev'); ?></h2>
+					<p class="error-404__text"><?php esc_html_e('It seems something went wrong. The page you are looking for doesn\'t exist or has been moved.', 'wp_dev'); ?></p>
 
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-					if ( linkpro_categorized_blog() ) :
-						?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wp_dev' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-						<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp_dev' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+					<a class="error-404__link flex justify-center align-center w-100-xs"
+					   href="<?php echo home_url(); ?>">
+						<?php esc_html_e('Take me home'); ?>
+					</a>
 
 				</div><!-- .page-content -->
+				<?php if ($not_found_image) : ?>
+					<div class="error-404__image flex column w-100-sm">
+						<img src="<?php echo esc_url($not_found_image['url']); ?>"
+							 alt="<?php echo esc_attr($not_found_image['alt']); ?>"/>
+					</div>
+				<?php endif; ?>
+
+
 			</section><!-- .error-404 -->
 
 		</section><!-- #main -->

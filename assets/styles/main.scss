@@ -16,10 +16,12 @@
 /** Import everything from layouts */
 @import "layouts/header";
 @import "layouts/footer";
+@import "layouts/404";
 
 /** Import everything from section */
 @import "blocks/spacer";
 @import "blocks/hero";
+@import "blocks/hero-contact";
 @import "blocks/side-by-side";
 @import "blocks/accordion";
 @import "blocks/repeater";
@@ -29,6 +31,13 @@
 @import "blocks/automatically";
 @import "blocks/about-price";
 @import "blocks/prefooter";
+@import "blocks/team";
+@import "blocks/top-banner";
+@import "blocks/values";
+@import "blocks/text";
+@import "blocks/teamwork";
+@import "blocks/buttons";
+@import "blocks/info";
 
 /**
  * Import npm dependencies

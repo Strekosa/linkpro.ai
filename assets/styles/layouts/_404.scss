@@ -1,0 +1,56 @@
+
+.error-404 {
+  padding: 120px 0;
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  .page-content {
+    padding-right: 20px;
+
+    h2 {
+      @include adaptiv-font(56, 40);
+      @include adaptiv-line-height(70, 50);
+
+      margin-bottom: 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+      align-items: center;
+      z-index: 3;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: $text-subcolor;
+    max-width: 590px;
+    margin-bottom: 32px;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__image {
+    max-width: 522px;
+    max-height: 480px;
+    z-index: 2;
+  }
+
+  &__link {
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    background: #e1e8f1;
+    border: 1px solid #cad5e2;
+    border-radius: 6px;
+    width: max-content;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      border: 1px solid $indigo;
+      color: $indigo;
+    }
+  }
+}

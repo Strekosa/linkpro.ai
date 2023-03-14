@@ -21,6 +21,7 @@ $image_position = get_field('image_position');
 $image = get_field('image');
 $subtitle = get_field('subtitle');
 $title = get_field('title');
+$desc = get_field('description');
 $link = get_field('link');
 ?>
 <section
@@ -45,9 +46,15 @@ $link = get_field('link');
 						<p><?php echo $subtitle; ?></p>
 					</div>
 				<?php endif; ?>
+
 				<?php
 				if ($title) : ?>
 					<h2 class="title"><?php echo $title; ?></h2>
+				<?php endif; ?>
+
+				<?php
+				if ($desc) : ?>
+					<div class="desc"><?php echo $desc; ?></div>
 				<?php endif; ?>
 
 				<?php
@@ -56,7 +63,7 @@ $link = get_field('link');
 					$link_title = $link['title'];
 					$link_target = $link['target'] ? $button['target'] : '_self';
 					?>
-					<a class="link w-100-xs flex justify-center"
+					<a class="link button w-100-xs flex justify-center"
 					   href="<?php echo esc_url($link_url); ?>"
 					   target="<?php echo esc_attr($link_target); ?>">
 						<?php echo esc_html($link_title); ?>

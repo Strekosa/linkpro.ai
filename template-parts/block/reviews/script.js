@@ -1,4 +1,4 @@
-
+//
 //
 // var colWidth = $(".review__item").width();
 //
@@ -13,7 +13,7 @@
 // 	columnWidth: ".review__item",
 // 	// percentPosition: true,
 // 	gutter: 10,
-// 	fitWidth: true
+// 	fitWidth: true,
 // });
 //
 // $grid.imagesLoaded().progress(function() {
