@@ -1,0 +1,76 @@
+
+.comment {
+  &__main {
+    max-width: 1064px !important;
+    background-color: #111622;
+    border-radius: 0 0 24px 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    padding: 30px 64px 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__text {
+    padding-top: 30px;
+    max-width: 560px;
+    flex: 1 1 100%;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 16px;
+
+    blockquote {
+      font-weight: 500;
+      font-size: 20px;
+      margin-block-start: 0;
+      margin-block-end: 28px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  }
+
+  &__image {
+    display: flex;
+    max-width: 298px;
+    max-height: 293px;
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    overflow: hidden;
+  }
+
+  &__photo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .comment {
+    &__main {
+      max-width: 96% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comment {
+    &__main {
+      padding: 40px;
+    }
+
+    &__text {
+      max-width: 100%;
+      margin-right: 0;
+      font-size: 14px;
+
+      blockquote {
+        font-size: 16px;
+      }
+    }
+  }
+}

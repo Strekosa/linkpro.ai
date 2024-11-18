@@ -1,0 +1,294 @@
+
+.price-cards {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center 20%;
+  margin-bottom: 24px;
+
+  @media screen and (max-width: 1024px) {
+    background-size: cover;
+  }
+
+  &__tabs {
+    width: max-content;
+    height: 56px;
+    top: 80px;
+    background: #f8fafc;
+    color: #90a2bc;
+    border: 2px solid #cad5e2;
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 94px;
+  }
+
+  &__tab {
+    padding: 12px 30px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+
+    @media screen and (max-width: 576px) {
+      padding: 12px 15px;
+    }
+
+    &.active {
+      background: #fff;
+      border: 1px solid #cad5e2;
+      box-shadow: 0 20px 25px -5px rgba(4, 19, 49, 0.1), 0 8px 10px -6px rgba(4, 19, 49, 0.1);
+      border-radius: 8px;
+      color: $text-color;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    margin-bottom: 40px;
+    align-items: end;
+
+    @media screen and (max-width: 1024px) {
+      grid-gap: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  &__card {
+    padding: 0 40px 40px 40px;
+    background: #fff;
+    border: 1px solid #e1e8f1;
+    box-shadow: 0 32px 40px -5px rgba(4, 19, 49, 0.16), 0 12px 12px -6px rgba(4, 19, 49, 0.1);
+    border-radius: 16px;
+    height: max-content;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 10px 20px 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0 20px 20px 20px;
+    }
+
+    &-subtitle {
+      position: relative;
+      padding: 12px 0 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 45px;
+        background: radial-gradient(48.62% 57.55% at 50.13% 50.94%, #554ce6 0%, rgba(11, 13, 19, 0) 100%);
+        position: absolute;
+        left: 0;
+        bottom: -60%;
+      }
+    }
+
+    &-heading {
+      margin-bottom: 24px;
+      padding-top: 40px;
+
+      @media screen and (max-width: 1024px) {
+        padding-top: 20px;
+      }
+    }
+
+    &-marker {
+      width: 6px;
+      height: 24px;
+      margin-right: 12px;
+      border-radius: 8px;
+    }
+
+    &-cost {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 64px;
+      margin-bottom: 20px;
+      display: none;
+
+      &::before {
+        content: '$';
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 64px;
+      }
+
+      &::after {
+        content: 'Per month';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 64px;
+        color: $text-subcolor;
+        margin-left: 16px;
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    &-desc {
+      color: $text-subcolor;
+      margin-bottom: 48px;
+    }
+
+    &-link {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+
+    &-text {
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+
+    &-included {
+      li {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        color: #354153;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          margin-right: 14.4px;
+        }
+
+        &.not-included {
+          color: #90a2bc;
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    &.dark-style {
+      background: linear-gradient(180deg, #0b0e14 0%, #080a0c 100%);
+      color: #fff;
+
+      .price-cards__card-desc {
+        color: #cad5e2;
+      }
+
+      .price-cards__card-included {
+        li {
+          color: #e1e8f1;
+
+          svg {
+            fill: #8690f9;
+
+            path {
+              fill: #8690f9;
+            }
+          }
+        }
+      }
+
+      .price-cards__card-included .not-included {
+        color: #354153;
+
+        svg {
+          fill: #354153;
+
+          path {
+            fill: #354153;
+          }
+        }
+      }
+
+      .price-cards__card-link {
+        background: #fff;
+        box-shadow: 0 10px 15px -3px rgba(4, 19, 49, 0.1), 0 4px 6px -4px rgba(4, 19, 49, 0.1);
+      }
+    }
+  }
+
+  .started-free {
+    width: 100%;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #e1e8f1;
+    box-shadow: 0 32px 40px -5px rgba(4, 19, 49, 0.16), 0 12px 12px -6px rgba(4, 19, 49, 0.1);
+    border-radius: 16px;
+
+    @media screen and (max-width: 768px) {
+      padding: 20px;
+
+      &__main {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__title {
+      display: flex;
+      margin-bottom: 24px;
+
+      &::before {
+        content: '';
+        width: 6px;
+        height: 24px;
+        background: #90a2bc;
+        border-radius: 8px;
+        display: inline;
+        margin-right: 12px;
+      }
+    }
+
+    &__text {
+      max-width: 550px;
+      margin-right: 20px;
+
+      @media screen and (max-width: 768px) {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__cost {
+      margin-right: 20px;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 64px;
+      height: 64px;
+      min-width: 145px;
+      max-width: 37.5%;
+      width: 100%;
+      display: flex;
+
+      &::after {
+        content: 'per month';
+        font-weight: 400;
+        font-size: 16px;
+        color: $text-subcolor;
+        margin-left: 16px;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+        max-width: max-content;
+
+        &::after {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &__link {
+      max-width: 24.5%;
+      width: 100%;
+      min-width: max-content;
+    }
+  }
+}

@@ -1,0 +1,323 @@
+
+.calculator {
+  padding: 120px 0 96px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .title {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  &__content {
+    max-width: 602px;
+    width: 100%;
+  }
+
+  &__main {
+    max-width: 1064px !important;
+    background: #fff;
+    border: 1px solid #cad5e2;
+    box-shadow:
+      0 20px 25px -5px rgba(4, 19, 49, 0.1),
+      0 8px 10px -6px rgba(4, 19, 49, 0.1),
+      0 0 0 16px rgba(225, 232, 241, 0.5);
+    border-radius: 12px;
+    padding: 40px 48px 48px 48px;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+  }
+
+  &__link {
+    width: max-content;
+  }
+
+  &__text {
+    ul {
+      li {
+        margin-bottom: 12px;
+        position: relative;
+        color: $text-subcolor;
+        font-size: 18px;
+        line-height: 31.5px;
+        align-items: center;
+        display: flex;
+
+        &::before {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath d='M1 4.47059L4.32143 8L11 1' stroke='%23554CE6' stroke-width='2'%3E%3C/path%3E%3C/svg%3E%0A");
+          margin-right: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #554ce6;
+          border-radius: 50%;
+          line-height: 0;
+        }
+      }
+    }
+  }
+
+  &__calc {
+    border-left: 1px solid #e1e8f1;
+    padding-left: 48px;
+    min-width: 350px;
+
+    form {
+      max-width: 260px;
+      width: 100%;
+
+      h6 {
+        margin-bottom: 24px;
+        margin-top: 18px;
+        font-weight: 500;
+      }
+
+      label {
+        font-size: 14px;
+        color: $text-subcolor;
+        font-weight: 400;
+      }
+
+      .select-hidden {
+        display: none;
+        visibility: hidden;
+      }
+
+      .select {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 48px;
+        font-size: 18px;
+        line-height: 31.5px;
+        color: $text-color;
+        margin-bottom: 24px;
+        margin-top: 12px;
+      }
+
+      .select-styled {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 8px 16px;
+        border: 1px solid #cad5e2;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.2s ease-in;
+
+        &::after {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4' fill='none'%3E%3Cpath d='M3.57558 3.57574L1.02411 1.02426C0.646128 0.646285 0.913828 0 1.44837 0H6.55131C7.08586 0 7.35356 0.646284 6.97558 1.02426L4.42411 3.57574C4.18979 3.81005 3.80989 3.81005 3.57558 3.57574Z' fill='%2346556A'%3E%3C/path%3E%3C/svg%3E");
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 14px;
+          right: 10px;
+          transition: all 0.5s;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          pointer-events: none;
+          line-height: 0;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:active,
+        &.active {
+          cursor: pointer;
+          border: 1px solid #1f293a;
+
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .select-options {
+        display: none;
+        position: absolute;
+        top: 115%;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        margin: 0;
+        list-style: none;
+        padding: 8px 0;
+        max-width: 260px;
+        background: #fff;
+        border: 1px solid #1f293a;
+        box-shadow: 0 20px 25px -5px rgba(4, 19, 49, 0.1), 0 8px 10px -6px rgba(4, 19, 49, 0.1);
+        border-radius: 8px;
+
+        li {
+          margin: 0;
+          padding: 4px 16px;
+          line-height: 31.5px;
+          transition: all 0.2s ease-in;
+
+          &:hover,
+          &.is-selected {
+            background: #e1e8f1;
+          }
+
+          &[rel="hide"] {
+            display: none;
+          }
+        }
+      }
+
+      .result {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 48px;
+        width: max-content;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+        .term {
+          margin-left: 10px;
+          font-size: 24px;
+          color: $text-subcolor;
+
+          &.sale {
+            display: flex;
+            align-items: center;
+
+            &::after {
+              content: '-70%';
+              font-size: 14px;
+              line-height: 16px;
+              color: #057a59;
+              background: #ecfdf5;
+              border: 1px solid #057a59;
+              border-radius: 24px;
+              padding: 4px 8px;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+
+      p:last-child {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .calculator {
+    &__main {
+      max-width: 96% !important;
+      padding: 40px 30px;
+    }
+
+    &__icon {
+      margin-right: 10px;
+    }
+
+    &__calc {
+      padding-left: 38px;
+      min-width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calculator {
+    &__content {
+      max-width: 100%;
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+      border-bottom: 1px solid #e1e8f1;
+    }
+
+    &__main {
+      max-width: 1064px !important;
+      padding: 40px 24px;
+    }
+
+    &__title {
+      margin-bottom: 64px;
+    }
+
+    &__icon {
+      width: 64px;
+      height: 64px;
+      margin-right: 24px;
+    }
+
+    &__link {
+      width: max-content;
+      margin-top: 72px;
+    }
+
+    ul {
+      li {
+        margin-bottom: 12px;
+        position: relative;
+        display: flex;
+        color: $text-subcolor;
+        font-size: 18px;
+        line-height: 31.5px;
+
+        &::before {
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath d='M1 4.47059L4.32143 8L11 1' stroke='%23554CE6' stroke-width='2'%3E%3C/path%3E%3C/svg%3E%0A");
+          margin-right: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #554ce6;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &__calc {
+      border-left: none;
+      padding-left: 0;
+
+      form {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .calculator {
+    &__title {
+      h3 {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+
+    &__link {
+      text-align: center;
+    }
+  }
+}
